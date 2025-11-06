@@ -155,7 +155,7 @@ export const formInputsList: IFormInput[] = [
   },
   {
     id:"discription",
-    name:"discription",
+    name:"description",
     Label: "Product Discription",
     type: "text"
   },

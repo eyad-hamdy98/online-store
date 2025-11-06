@@ -4,15 +4,21 @@ import Modal from "./components/Ui/Modal";
 import { formInputsList, productList } from "./data";
 import Button from "./components/Ui/Button";
 import Input from "./components/Ui/Input";
+import type { IProduct } from "./interfaces";
 
 const App = () => {
 
     /*----------- STATE --------------*/
-    const [product, setProduct] = useState({
+    const [product, setProduct] = useState<IProduct>({
       title: '',
-      discription: '',
+      description: '',
       imageURL: '',
       price: '',
+      colors: [],
+      category: {
+        name: '',
+        imageURL: '',
+      }
     })
     const [isOpen, setIsOpen] = useState(false);
     
@@ -36,7 +42,7 @@ const App = () => {
   const renderFormInputList = formInputsList.map(input => 
     <div className="flex flex-col">
       <label htmlFor={input.id}  className="mb-[2px] text-sm font-medium text-gray-700" >{input.Label}</label>
-      <Input type="text" id={input.id} name={input.id} value={''} onChange={onChangeHandler}/>
+      <Input type="text" id={input.id} name={input.id} value={product[input.name]} onChange={onChangeHandler}/>
     </div>
   )
   return (
