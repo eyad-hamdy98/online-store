@@ -1,4 +1,4 @@
-import type { IProduct } from "../interfaces";
+import type { IFormInput, IProduct } from "../interfaces";
 
 export const productList: IProduct[] = [
   {
@@ -144,3 +144,31 @@ export const productList: IProduct[] = [
     },
   },
 ];
+
+
+export const formInputsList: IFormInput[] = [
+  {
+    id:"title",
+    name:"title",
+    Label: "Product Title",
+    type: "text"
+  },
+  {
+    id:"discription",
+    name:"discription",
+    Label: "Product Discription",
+    type: "text"
+  },
+  {
+    id:"image",
+    name:"imageURL",
+    Label: "Product Image URL",
+    type: "text"
+  },
+  {
+    id:"price",
+    name:"price",
+    Label: "Product Price",
+    type: "text"
+  },
+]
