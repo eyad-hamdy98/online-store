@@ -130,7 +130,7 @@ const App = () => {
     toast("Product has been added successfully!", {
       icon: "👏",
       style: {
-        background: "black",
+        background: " black",
         color: "white",
       },
     });
@@ -161,6 +161,14 @@ const App = () => {
     setProductToEdit(defaultProductObj);
     setTempColor([]);
     closeEditModal();
+
+    toast("Product has been edit successfully!", {
+      icon: "👏",
+      style: {
+        background: "#4338ca",
+        color: "white",
+      },
+    });
   };
 
   /*----------- RENDER --------------*/
